@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgba(139, 232, 240, 0.5);
+    z-index: -3;
+}
+
+/*----------------------------------------------------------------*/
+/* navigationbar */
+#navigationBar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navigationBar::before {
+    content: "";
+    background-color: #0f1111;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#navigationBarFirst {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+}
+
+#navigationBarFirst a {
+    margin : 10px 0px;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.navbarBtn {
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbarBtn:hover {
+    background-color: aliceblue;
+    color: #001d3d;
+    border-radius: 15px;
+}
+
+.navbarBtn i {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+#siteName{
+    margin: 0px 25px;
+    height: 40px;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+#navigationBarSecond{
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#contriBtn {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    color: #808080;
+}
+
+#contriBtn:hover {
+    text-decoration: underline;
+}
+.homeclick {
+    color: rgb(255, 255, 255);
+}
+
