@@ -31,6 +31,14 @@ app.get("/contribute", (req, res) => {
     res.render("contribute")
 });
 
+app.get("/contactus", (req, res) => {
+    res.render("contactus")
+});
+
+app.get("/aboutus", (req, res) => {
+    res.render("aboutus")
+});
+
 app.post("/contribute", async (req, res) => {
     try {
         const time = req.body.timeOfDay;
