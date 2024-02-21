@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute</title>
+    {{>stylesheets}}
+    <link rel="stylesheet" href="css/contribute.css">
+</head>
+
+<body>
+    {{>navbar}}
+    {{>background}}
+    <div id="home">
+        <form action="/contribute" method="post">
+            <div id="formContainer">
+                <h1 id="contributeHeading">Contribute</h1>
+                <div id="personalInfo" class="informationInput">
+                    <h3>Personal Information</h3>
+                    <div>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                    </div>
+                    <div>
+                        <input type="text" name="email" id="email" placeholder="Email Address" required>
+                        <input type="text" name="phone" id="phone" placeholder="Mobile Number" required>
+                    </div>
+                </div>
+                <div id="pickupAddress" class="informationInput">
+                    <h3>Pickup Address</h3>
+                    <div>
+                        <input type="text" name="address" id="address" required>
+                        <input type="text" name="city" id="city" required>
+                    </div>
+                    <div>
+                        <input type="text" name="district" id="district" required>
+                        <input type="text" name="pincode" id="pincode" required>
+                    </div>
+                    <div>
+                        <input type="text" name="state" id="state" required>
+                        <input type="text" name="country" id="country" required>
+                    </div>
+                </div>
+                <div id="donationType" class="informationInput">
+                    <h3>What you want to donate?</h3>
+                    <input type="text" name="state" id="state">
+                    <input type="text" name="state" id="state">
+                    <input type="text" name="state" id="state">
+                    <input type="text" name="state" id="state">
+                    <input type="text" name="state" id="state">
+                    <input type="submit" value="Contribute">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
