@@ -42,15 +42,37 @@
                         <input type="text" name="country" id="country" required>
                     </div>
                 </div>
-                <div id="donationType" class="informationInput">
+                <div class="informationInput">
                     <h3>What you want to donate?</h3>
-                    <input type="text" name="state" id="state">
-                    <input type="text" name="state" id="state">
-                    <input type="text" name="state" id="state">
-                    <input type="text" name="state" id="state">
-                    <input type="text" name="state" id="state">
-                    <input type="submit" value="Contribute">
+                    <div id="donationType">
+                        <div id="left">
+                            <label for="dateOfDonation">Select Date to donate:</label>
+                            <label for="timeOfDay">When you want to donate: </label>
+                            <label for="whatToDonate">What you want to donate: </label>
+                        </div>
+                        <div id="right">
+                            <input type="date" name="dateOfDonation" id="dateOfDonation">
+                            <div id="timeOfDay">
+                                <div>
+                                    <input name="timeOfDay" value="morning" id="morning" type="checkbox">
+                                    <label for="morning"> Morning</label>
+                                </div>
+
+                                <div>
+                                    <input name="timeOfDay" value="afternoon" id="afternoon" type="checkbox">
+                                    <label for="afternoon"> Afternoon</label>
+                                </div>
+
+                                <div>
+                                    <input name="timeOfDay" value="night" id="night" type="checkbox">
+                                    <label for="night"> Night</label>
+                                </div>
+                            </div>
+                            <input type="text" name="whatToDonate" id="whatToDonate">
+                        </div>
+                    </div>
                 </div>
+                <input type="submit" value="Contribute">
             </div>
         </form>
     </div>

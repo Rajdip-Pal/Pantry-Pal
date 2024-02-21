@@ -24,3 +24,13 @@
     align-items: center;
     justify-content: center;
 }
+
+#donationType {
+    display: flex;
+    flex-direction: row;
+}
+
+#left, #right {
+    display: flex;
+    flex-direction: column;
+}
