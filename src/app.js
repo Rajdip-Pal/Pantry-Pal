@@ -2,6 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 require("./db/conn");
+const Register = require("./models/registers");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -30,10 +31,33 @@ app.get("/contribute", (req, res) => {
     res.render("contribute")
 });
 
+app.post("/contribute", async (req, res) => {
+    try {
+        const time = req.body.timeOfDay;
+        const registerProfile = new Register({
+            firstName : req.body.firstName,
+            lastName : req.body.lastName,
+            email : req.body.email,
+            username : req.body.username,
+            phone : req.body.phone,
+            address : req.body.address,
+            city : req.body.city,
+            district : req.body.district,
+            state : req.body.state,
+            pincode : req.body.pincode,
+            country : req.body.country,
+            dateOfDonation : req.body.dateOfDonation,
+            timeOfDay : req.body.timeOfDay,
+            whatToDonate : req.body.whatToDonate
+        });
 
-
-
-
+        const registered = await registerProfile.save();
+        console.log("Done!");
+        res.send('Thank you for contributing.');
+    } catch (error) {
+        res.status(400).send(error);
+    }
+})
 
 app.listen(port, () => {
     console.log(`server is running at ${port}`)
