@@ -6,23 +6,23 @@
 }
 
 .headingText {
-    margin: 40px 0px 20px 0px;
-    font-size: 60px;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px black;
+    margin: 0px 0px 20px 12px;
+    font-size: 73px;
+    align-self: flex-start;
+    color: rgb(255, 84, 84);
+    text-shadow: 1px 1px black;
 }
 
 .headingText2 {
-    margin: 10px 0px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
+    margin: 170px 0px 8px 10px;
+    align-self: flex-start;
+    font-size: 35px;
+    color: rgb(255, 84, 84);
     text-shadow: 1px 1px black;
 }
 
 #quote {
-    margin: 25px 0px;
+    margin: 11px 0px 25px 0px;
     font-size: 40px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -57,7 +57,7 @@
 }
 
 .container {
-    margin: 60px;
+    margin: 60px 0px 140px 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
