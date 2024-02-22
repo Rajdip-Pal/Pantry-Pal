@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    {{>navbar}}
+    {{>background}}
+    <div id="home">
+        <form action="/register" method="post">
+            <div id="formContainer">
+                <h1 id="contributeHeading">Contribute</h1>
+                <hr id="contributeHeading-hr">
+                <div id="personalInfo" class="informationInput">
+                    <h3>Basic Information</h3>
+                    <input type="text" name="name" id="name" placeholder="Full Name of Organisation" class="text-input"
+                        required>
+                    <div>
+                        <input type="text" name="email" id="email" placeholder="Official Email Address"
+                            class="text-input" required>
+                        <input type="text" name="phone" id="phone" placeholder="Telephone Number" class="text-input"
+                            required>
+                    </div>
+                </div>
+                <div id="officeAddress" class="informationInput">
+                    <h3>Office Address</h3>
+                    <div>
+                        <input type="text" name="address" id="address" class="text-input" placeholder="Address"
+                            required>
+                        <input type="text" name="city" id="city" class="text-input" placeholder="City" required>
+                    </div>
+                    <div>
+                        <input type="text" name="district" id="district" class="text-input" placeholder="District"
+                            required>
+                        <input type="text" name="pincode" id="pincode" class="text-input" placeholder="PIN Code"
+                            required>
+                    </div>
+                    <div>
+                        <input type="text" name="state" id="state" class="text-input" placeholder="State" required>
+                        <input type="text" name="country" id="country" class="text-input" placeholder="Country"
+                            required>
+                    </div>
+                </div>
+                <input type="submit" value="Contribute" id="submitbtn">
+            </div>
+        </form>
+    </div>
+    {{>footer}}
+</body>
+
+</html>

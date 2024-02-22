@@ -2,7 +2,6 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 require("./db/conn");
-const Register = require("./models/registers");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -39,10 +38,26 @@ app.get("/aboutus", (req, res) => {
     res.render("aboutus")
 });
 
+app.get("/register", (req, res) => {
+    res.render("register")
+});
+
+app.get("/thanksContributing", (req, res) => {
+    res.render("thanksContributing")
+});
+
+app.get("/thanksJoining", (req, res) => {
+    res.render("thanksJoining")
+});
+
+app.get("/register", (req, res) => {
+    res.render("register")
+});
+
 app.post("/contribute", async (req, res) => {
     try {
-        const time = req.body.timeOfDay;
-        const registerProfile = new Register({
+        const Contributors = require("./models/contributors");
+        const register1 = new Contributors({
             firstName : req.body.firstName,
             lastName : req.body.lastName,
             email : req.body.email,
@@ -59,11 +74,35 @@ app.post("/contribute", async (req, res) => {
             whatToDonate : req.body.whatToDonate
         });
 
-        const registered = await registerProfile.save();
+        const registered1 = await register1.save();
         console.log("Done!");
-        res.send('Thank you for contributing.');
+        res.render('thanksContributing')
     } catch (error) {
-        res.status(400).send(error);
+        res.send("An Error Occureed. Please Try Again!");
+    }
+})
+
+app.post("/register", async (req, res) => {
+    try {
+        const Registers = require("./models/registers");
+        const register2 = new Registers({
+            name : req.body.name,
+            email : req.body.email,
+            username : req.body.username,
+            phone : req.body.phone,
+            address : req.body.address,
+            city : req.body.city,
+            district : req.body.district,
+            state : req.body.state,
+            pincode : req.body.pincode,
+            country : req.body.country,
+        });
+
+        const registered2 = await register2.save();
+        console.log("Done!");
+        res.send('Thanks for joining us...');
+    } catch (error) {
+        res.send("An Error Occureed. Please Try Again!");
     }
 })
 

@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema({
-    name : {
+    firstName : {
+        type: String,
+        required: true
+    },
+    lastName : {
         type: String
     },
     email : {
@@ -34,9 +38,21 @@ const schema = new mongoose.Schema({
     country: {
         type: String,
         required: true
+    },
+    dateOfDonation : {
+        type: Date,
+        required: true
+    },
+    timeOfDay: {
+        type: Array,
+        required: true
+    },
+    whatToDonate: {
+        type: String,
+        required: true
     }
 });
 
-const Registers = new mongoose.model("Registers", schema);
+const Contributors = new mongoose.model("Contributors", schema);
 
-module.exports = Registers;
+module.exports = Contributors;
