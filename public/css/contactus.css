@@ -1,11 +1,10 @@
 
 /* body */
 .contact-container {
-    /* height: 100vh; */
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    border: 4px solid #0dd56a;
+    justify-content: center;
+    border: 2px solid rgb(202, 118, 15);
     width: fit-content;
     background-color: rgba(253,253,253,0.8);
     margin: 140px 0px 40px 0px;
@@ -13,21 +12,24 @@
     border-radius: 20px;
 }
 
+.contact-container * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .contact-left {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-.contact-lefttitle h2 {
+.contact-lefttitle h3 {
     font-weight: 600;
     font-size: 50px;
     color: rgb(76, 139, 255);
-
 }
 
-.contact-lefttitle hr {
+.contact-left hr {
     border: none;
     width: 120px;
     height: 5px;
@@ -37,17 +39,19 @@
 }
 
 .contact-inputs {
+    box-sizing: border-box;
+    font-size: 18px;
     width: 400px;
-    height: 50px;
-    border: none;
+    padding: 15px 20px;
     outline: none;
-    padding-left: 25px;
-    font-weight: 500px;
     color: #666;
     border-radius: 50px;
+    margin: 10px 0px;
+    border: 0.5px solid black;
 }
 
 #textArea {
+    font-size: 18px;
     height: 140px;
     padding-top: 15px;
     border-radius: 20px;

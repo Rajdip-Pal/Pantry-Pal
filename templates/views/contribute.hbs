@@ -17,39 +17,40 @@
         <form action="/contribute" method="post">
             <div id="formContainer">
                 <h1 id="contributeHeading">Contribute</h1>
+                <hr id="contributeHeading-hr">
                 <div id="personalInfo" class="informationInput">
                     <h3>Personal Information</h3>
                     <div>
-                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
-                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" class="text-input" required>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="text-input" required>
                     </div>
                     <div>
-                        <input type="text" name="email" id="email" placeholder="Email Address" required>
-                        <input type="text" name="phone" id="phone" placeholder="Mobile Number" required>
+                        <input type="text" name="email" id="email" placeholder="Email Address" class="text-input" required>
+                        <input type="text" name="phone" id="phone" placeholder="Mobile Number" class="text-input" required>
                     </div>
                 </div>
                 <div id="pickupAddress" class="informationInput">
                     <h3>Pickup Address</h3>
                     <div>
-                        <input type="text" name="address" id="address" required>
-                        <input type="text" name="city" id="city" required>
+                        <input type="text" name="address" id="address" class="text-input" placeholder="Address" required>
+                        <input type="text" name="city" id="city" class="text-input" placeholder="City" required>
                     </div>
                     <div>
-                        <input type="text" name="district" id="district" required>
-                        <input type="text" name="pincode" id="pincode" required>
+                        <input type="text" name="district" id="district" class="text-input" placeholder="District" required>
+                        <input type="text" name="pincode" id="pincode" class="text-input" placeholder="PIN Code" required>
                     </div>
                     <div>
-                        <input type="text" name="state" id="state" required>
-                        <input type="text" name="country" id="country" required>
+                        <input type="text" name="state" id="state" class="text-input" placeholder="State" required>
+                        <input type="text" name="country" id="country" class="text-input" placeholder="Country" required>
                     </div>
                 </div>
                 <div class="informationInput">
                     <h3>What you want to donate?</h3>
                     <div id="donationType">
                         <div id="left">
-                            <label for="dateOfDonation">Select Date to donate:</label>
-                            <label for="timeOfDay">When you want to donate: </label>
-                            <label for="whatToDonate">What you want to donate: </label>
+                            <label for="dateOfDonation" id="label1">Select Date to donate:</label>
+                            <label for="timeOfDay" id="label2">When you want to donate: </label>
+                            <label for="whatToDonate" id="label3">What you want to donate: </label>
                         </div>
                         <div id="right">
                             <input type="date" name="dateOfDonation" id="dateOfDonation" required>
@@ -69,11 +70,11 @@
                                     <label for="night"> Night</label>
                                 </div>
                             </div>
-                            <input type="text" name="whatToDonate" id="whatToDonate" required>
+                            <textarea name="whatToDonate" id="whatToDonate" class="text-input" required></textarea>
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Contribute">
+                <input type="submit" value="Contribute" id="submitbtn">
             </div>
         </form>
     </div>

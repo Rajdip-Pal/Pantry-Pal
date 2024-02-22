@@ -13,9 +13,33 @@
     border: 2px solid rgb(202, 118, 15);
     width: fit-content;
     background-color: rgba(253, 253, 253, 0.8);
-    margin: 140px 20px 20px 20px;
+    margin: 140px 0px 40px 0px;
     padding: 25px;
     border-radius: 20px;
+}
+
+#formContainer * {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#formContainer h3 {
+    padding: 10px 0px;
+}
+
+#contributeHeading {
+    font-weight: 600;
+    font-size: 50px;
+    color: rgb(76, 139, 255)
+}
+
+#contributeHeading-hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #a363aa;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .informationInput {
@@ -28,9 +52,59 @@
 #donationType {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #left, #right {
     display: flex;
     flex-direction: column;
+}
+
+#label1 {
+    margin: 19px 0px;
+}
+
+#label2 {
+    margin: 14px 0px;
+}
+
+#label3 {
+    margin: 22px 0px;
+}
+
+.text-input {
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+#submitbtn{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(270deg, #ff994f, #0dd56a);
+    cursor: pointer;
+}
+
+#dateOfDonation {
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+#whatToDonate {
+    padding: 5px;
+    height: 80px;
+    border-radius: 0px;
+}
+
+#timeOfDay {
+    margin-left: 30px;
 }
