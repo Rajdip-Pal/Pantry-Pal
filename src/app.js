@@ -76,7 +76,7 @@ app.post("/contribute", async (req, res) => {
 
         const registered1 = await register1.save();
         console.log("Done!");
-        res.render('thanksContributing')
+        res.render("/thanksContributing")
     } catch (error) {
         res.send("An Error Occureed. Please Try Again!");
     }
@@ -100,7 +100,7 @@ app.post("/register", async (req, res) => {
 
         const registered2 = await register2.save();
         console.log("Done!");
-        res.send('Thanks for joining us...');
+        res.render("/thanksJoining");
     } catch (error) {
         res.send("An Error Occureed. Please Try Again!");
     }
