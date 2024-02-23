@@ -43,6 +43,18 @@ app.get("/contribute", (req, res) => {
     res.render("contribute")
 });
 
+app.get("/thanksContributing", (req, res) => {
+    res.render("thanksContributing");
+});
+
+app.get("/thanksJoining", (req, res) => {
+    res.render("thanksJoining");
+});
+
+app.get("/notAvailable", (req, res) => {
+    res.render("notAvailable");
+});
+
 app.get("/contactus", (req, res) => {
     res.render("contactus")
 });
@@ -110,6 +122,26 @@ app.post("/contribute", async (req, res) => {
                 }
                 main().catch(console.error);
                 console.log(findPIN);
+
+                const register1 = new Contributors({
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName,
+                    email: req.body.email,
+                    phone: req.body.phone,
+                    address: req.body.address,
+                    city: req.body.city,
+                    district: req.body.district,
+                    state: req.body.state,
+                    pincode: req.body.pincode,
+                    country: req.body.country,
+                    dateOfDonation: req.body.dateOfDonation,
+                    timeOfDay: req.body.timeOfDay,
+                    whatToDonate: req.body.whatToDonate
+                });
+        
+                const registered1 = await register1.save();
+                console.log("Done!");
+                res.render("thanksContributing");
             }
         }
         else if (findDIST.length != 0) {
@@ -129,30 +161,31 @@ app.post("/contribute", async (req, res) => {
                 main().catch(console.error);
             }
             console.log(findDIST);
+
+            const register1 = new Contributors({
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                email: req.body.email,
+                phone: req.body.phone,
+                address: req.body.address,
+                city: req.body.city,
+                district: req.body.district,
+                state: req.body.state,
+                pincode: req.body.pincode,
+                country: req.body.country,
+                dateOfDonation: req.body.dateOfDonation,
+                timeOfDay: req.body.timeOfDay,
+                whatToDonate: req.body.whatToDonate
+            });
+    
+            const registered1 = await register1.save();
+            console.log("Done!");
+            res.render("thanksContributing");
         }
         else {
+            res.render("notAvailable");
         }
-
-
-        const register1 = new Contributors({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            phone: req.body.phone,
-            address: req.body.address,
-            city: req.body.city,
-            district: req.body.district,
-            state: req.body.state,
-            pincode: req.body.pincode,
-            country: req.body.country,
-            dateOfDonation: req.body.dateOfDonation,
-            timeOfDay: req.body.timeOfDay,
-            whatToDonate: req.body.whatToDonate
-        });
-
-        const registered1 = await register1.save();
-        console.log("Done!");
-        res.render("thanksContributing");
+                
     } catch (error) {
         console.log(error);
         res.send("An Error Occureed. Please Try Again!");

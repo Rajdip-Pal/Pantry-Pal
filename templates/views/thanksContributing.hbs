@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/thanksContributing.css">
+
+    <style>
+        #footer {
+            position: fixed;
+        }
+
+        #thank-you-text {
+            font-size: 70px;
+            padding: 200px 0px 40px 0px;
+            text-align: center;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px black;
+        }
+    </style>
 </head>
+
 <body>
     {{>navbar}}
     {{>background}}
-    <h1>Thank you for Contributing!</h1>
+    <h1 id="thank-you-text">Thank you for Contributing!</h1>
     {{>footer}}
 </body>
+
 </html>
