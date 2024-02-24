@@ -63,6 +63,10 @@ app.get("/aboutus", (req, res) => {
     res.render("aboutus")
 });
 
+app.get("/helpus", (req, res) => {
+    res.render("helpus")
+});
+
 app.get("/register", (req, res) => {
     res.render("register")
 });
